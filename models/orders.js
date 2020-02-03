@@ -1,12 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const orders = sequelize.define('orders', {
-    clientName: DataTypes.STRING,
-    statusOrder: DataTypes.STRING,
-    NumberTable: DataTypes.DECIMAL
+    cliente: DataTypes.STRING,
+    mesa: DataTypes.DECIMAL,
+    status: DataTypes.STRING
   }, {});
   orders.associate = function(models) {
-    // orders.hasMany(models.orderItems)
+    // associations can be defined here
   };
   return orders;
 };
